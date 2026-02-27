@@ -452,7 +452,7 @@ const Services = () => {
       <ServiceSection 
         title="Servicio de Masajista"
         desc="La recuperación es parte del entrenamiento. Ofrecemos servicio de masajista deportivo para descargar tensiones y acelerar tu vuelta al ruedo."
-        image="masajista.png"
+        image="masajista.jpg"
       />
 
       {/* 6. Nutrición Deportiva */}
