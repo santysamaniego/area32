@@ -459,7 +459,7 @@ const Services = () => {
       <ServiceSection 
         title="Nutrición Deportiva"
         desc="Potenciá tus resultados con el combustible adecuado. Contamos con asesoramiento en nutrición deportiva para que tu dieta esté a la altura de tus metas."
-        image="nutricion.png"
+        image="nutricion2.png"
         reverse={true}
       />
     </section>
