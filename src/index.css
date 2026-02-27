@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #FF6B00;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-accent: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-display antialiased;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation: marquee 8s linear infinite;
+  }
+}
+
+@keyframes shimmer-text {
+  0% { background-position: 0% 0; }
+  40% { background-position: 100% 0; }
+  100% { background-position: 100% 0; }
+}
+
+.shimmer-text-white {
+  background: linear-gradient(90deg, #fff 0%, #fff 40%, #888 50%, #fff 60%, #fff 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 5s infinite linear;
+  display: inline-block;
+  padding-right: 0.15em;
+}
+
+.shimmer-text-orange {
+  background: linear-gradient(90deg, #FF6B00 0%, #FF6B00 40%, #fff 50%, #FF6B00 60%, #FF6B00 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 5s infinite linear;
+  display: inline-block;
+  padding-right: 0.15em;
+}
+
+.service-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-image-container:hover {
+  border-color: #FF6B00;
+  box-shadow: 0 20px 40px rgba(255, 107, 0, 0.4), 0 0 20px rgba(255, 107, 0, 0.2);
+  transform: translateY(-5px) scale(1.02);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF8C33 100%);
+}
